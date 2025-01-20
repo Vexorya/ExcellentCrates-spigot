@@ -160,7 +160,6 @@ public class PreviewMenu extends ConfigMenu<CratesPlugin> implements AutoFilled<
             }
 
             ItemReplacer.create(item).trimmed()
-                .setDisplayName(this.rewardName)
                 .setLore(this.rewardLore)
                 .replace(WIN_LIMIT_AMOUNT, limitAmountLore)
                 .replace(WIN_LIMIT_COOLDOWN, limitCooldownLore)
