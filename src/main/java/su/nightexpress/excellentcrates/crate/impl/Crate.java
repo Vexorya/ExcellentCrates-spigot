@@ -144,10 +144,6 @@ public class Crate extends AbstractFileData<CratesPlugin> implements Placeholder
         this.setItem(config.getItem("Item"));
 
         this.blockPositions.addAll(config.getStringList("Block.Positions").stream().map(WorldPos::deserialize).toList());
-        this.blockPositions.removeIf(pos -> {
-            Block block = pos.toBlock();
-            return block != null && block.isEmpty();
-        });
 
         this.setPushbackEnabled(config.getBoolean("Block.Pushback.Enabled"));
         this.setHologramEnabled(config.getBoolean("Block.Hologram.Enabled"));
